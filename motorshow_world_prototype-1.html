@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+<title>MotorShow World — Discover Car Events</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1b2c;--panel2:#12243a;--line:#203a56;--gold:#f4bd45;--text:#f5f7fb;--muted:#a9bbcf;--green:#7dd3a7}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 75% 0%,#142a40 0,#07111f 42%);color:var(--text);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1220px;margin:auto;padding:0 22px}.top{border-bottom:1px solid var(--line);background:#06101beF;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}.nav{min-height:72px;display:flex;align-items:center;gap:24px;justify-content:space-between}.brand{font-weight:900;font-size:19px;letter-spacing:-.7px;white-space:nowrap}.brand span{color:var(--gold)}.navlinks{display:flex;gap:18px;align-items:center}.navlinks a{color:#c4d1e0;text-decoration:none}.navlinks a:hover{color:var(--gold)}.btn{border:1px solid var(--line);background:#102139;color:var(--text);border-radius:12px;padding:10px 15px;font-weight:750}.btn:hover{filter:brightness(1.13)}.btn.gold{background:var(--gold);color:#161b22;border-color:var(--gold)}.btn.outline{border-color:#d59e2b;background:transparent;color:var(--gold)}.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:22px;padding:30px 0}.hero-main{min-height:320px;border-radius:22px;padding:34px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(3,10,19,.95),rgba(3,10,19,.46)),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=85') center/cover}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-weight:850;font-size:12px}.hero h1{font-size:clamp(32px,4.4vw,54px);line-height:1.05;margin:10px 0}.hero p{max-width:540px;color:#d2deea;margin:0 0 18px}.actions{display:flex;gap:10px;flex-wrap:wrap}.premium{background:linear-gradient(145deg,#13243a,#091523);border:1px solid #6b542a;border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:center}.premium h2{margin:0 0 6px;font-size:22px}.premium p{color:var(--muted);margin:0 0 16px}.plans{display:grid;grid-template-columns:1fr 1fr;gap:10px}.plan{border:1px solid #765b2c;border-radius:14px;padding:14px}.plan b{font-size:26px;display:block}.plan small{color:var(--muted)}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:14px;margin:12px 0 16px}.sectionhead h2{margin:0;font-size:25px}.sectionhead p{margin:3px 0 0;color:var(--muted)}.filters{display:flex;gap:8px;overflow:auto;padding:2px 0 16px}.chip{white-space:nowrap;border:1px solid var(--line);background:#0d1b2c;color:#d8e3ee;border-radius:99px;padding:9px 15px}.chip.active{background:var(--gold);border-color:var(--gold);color:#15191e;font-weight:800}.searchrow{display:flex;gap:10px;margin-bottom:18px}.searchrow input,.searchrow select{min-width:0;background:#0b1929;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px}.searchrow input{flex:1}.content{display:grid;grid-template-columns:1fr .85fr;gap:20px;margin-bottom:34px}.events{display:grid;gap:12px;align-content:start}.event{display:grid;grid-template-columns:155px 1fr;gap:15px;padding:12px;border:1px solid var(--line);background:linear-gradient(130deg,#0d1c2d,#091522);border-radius:16px;min-width:0}.event img{width:100%;height:138px;object-fit:cover;border-radius:11px;background:#20344a}.event h3{font-size:17px;margin:3px 0 5px}.meta{color:var(--muted);font-size:13px;margin:3px 0}.tag{display:inline-block;border:1px solid #355574;border-radius:99px;padding:3px 8px;color:#c4d9ef;font-size:11px;margin-bottom:5px}.event-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:10px}.locked{color:var(--gold);font-size:12px}.mapcard{border:1px solid var(--line);background:#0c1b2b;border-radius:18px;padding:15px;position:sticky;top:88px;height:fit-content}.maphead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.maphead h3{margin:0}.mapart{height:360px;position:relative;overflow:hidden;border-radius:13px;background:linear-gradient(140deg,#14314a,#0b2437 45%,#102e42);border:1px solid #25455e}.mapart:before{content:"";position:absolute;inset:-20%;background:repeating-linear-gradient(24deg,transparent 0 40px,#29485a 41px 43px,transparent 44px 78px),repeating-linear-gradient(110deg,transparent 0 52px,#203e53 53px 55px,transparent 56px 100px);opacity:.6;transform:rotate(-8deg)}.continent{position:absolute;background:#315c60;opacity:.75;border-radius:45% 55% 35% 65%;filter:drop-shadow(0 0 12px #122c3b)}.c1{width:28%;height:38%;left:15%;top:18%;transform:rotate(25deg)}.c2{width:18%;height:35%;left:33%;top:53%;transform:rotate(-15deg)}.c3{width:31%;height:30%;left:49%;top:22%;transform:rotate(10deg)}.c4{width:18%;height:20%;left:69%;top:55%;transform:rotate(18deg)}.pin{position:absolute;border:2px solid white;background:var(--gold);width:13px;height:13px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 0 0 5px #f4bd452b}.pin:after{content:"";position:absolute;width:4px;height:4px;background:#17202a;border-radius:50%;top:3px;left:3px}.mapnote{position:absolute;bottom:12px;left:12px;right:12px;background:#07111fdf;border:1px solid #38546c;border-radius:10px;padding:9px;font-size:12px;color:#d6e4f1}.mapdisclaimer{font-size:12px;color:var(--muted);margin:10px 2px 0}.below{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0}.info{background:#0d1b2c;border:1px solid var(--line);border-radius:16px;padding:20px}.info h3{margin:0 0 8px}.info p,.info li{color:var(--muted)}footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:13px}.modalback{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:18px;z-index:20}.modalback.show{display:flex}.modal{max-width:560px;width:100%;max-height:90vh;overflow:auto;background:#0c1a2a;border:1px solid #42617c;border-radius:20px;padding:24px;box-shadow:0 25px 100px #0009}.modal h2{margin:0 0 8px}.modal p{color:var(--muted)}.modal .x{float:right}.detailgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.detail{background:#13253a;border-radius:12px;padding:12px}.detail small{display:block;color:var(--muted)}.notice{font-size:12px;color:#e4c987;background:#302719;border:1px solid #67502a;padding:10px;border-radius:10px;margin-top:12px}.empty{color:var(--muted);padding:22px;border:1px dashed var(--line);border-radius:14px}.hidden{display:none!important}
+@media(max-width:850px){.navlinks{display:none}.hero{grid-template-columns:1fr}.hero-main{min-height:300px}.content{grid-template-columns:1fr}.mapcard{position:relative;top:auto}.below{grid-template-columns:1fr}}
+@media(max-width:520px){.wrap{padding:0 13px}.nav{min-height:62px}.brand{font-size:16px}.hero{padding:17px 0}.hero-main{padding:22px;min-height:290px}.premium{padding:18px}.event{grid-template-columns:105px 1fr;gap:10px;padding:9px}.event img{height:120px}.event h3{font-size:15px}.event .btn{padding:8px 10px}.searchrow{flex-wrap:wrap}.searchrow input{flex-basis:100%}.mapart{height:280px}.plans{gap:7px}.plan{padding:10px}.plan b{font-size:22px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav">
+  <a class="brand" href="#" style="color:inherit;text-decoration:none">⌁ MOTORSHOW <span>WORLD</span></a>
+  <nav class="navlinks"><a href="#home">Home</a><a href="#events">Events</a><a href="#map">Map</a><a href="#premium">Premium</a></nav>
+  <div style="display:flex;gap:8px"><button class="btn" id="loginBtn">Log in</button><button class="btn gold" id="signupBtn">Sign up</button></div>
+</div></header>
+<main class="wrap" id="home">
+<section class="hero">
+  <div class="hero-main">
+    <div class="eyebrow">The world's motor shows</div>
+    <h1>Find Motor Shows<br>Around the World</h1>
+    <p>Discover car exhibitions, supercar meets, classic-car shows and automotive events around the globe.</p>
+    <div class="actions"><a class="btn gold" href="#events" style="text-decoration:none">⌕ &nbsp; Browse events</a><a class="btn" href="#map" style="text-decoration:none">◎ &nbsp; Explore map</a></div>
+  </div>
+  <aside class="premium" id="premium">
+    <div class="eyebrow">✦ Member access</div><h2>Unlock the full experience</h2>
+    <p>Free visitors see event names. Premium members can view the full event guide.</p>
+    <div class="plans">
+      <div class="plan"><small>Monthly</small><b>$0.75</b><small>per month</small><button class="btn outline" style="width:100%;margin-top:10px" onclick="openSubscribe('monthly')">Choose</button></div>
+      <div class="plan"><small>Yearly · Save more</small><b>$5.00</b><small>per year</small><button class="btn gold" style="width:100%;margin-top:10px" onclick="openSubscribe('yearly')">Choose</button></div>
+    </div>
+    <p style="margin:15px 0 0;font-size:13px">Premium includes venue details, photos, travel tips, ticket prices and official event links.</p>
+  </aside>
+</section>
+<section id="events">
+  <div class="sectionhead"><div><h2>🌐 Upcoming Motor Shows</h2><p>Explore event names by category and region.</p></div><span class="tag">Demo listings</span></div>
+  <div class="filters" id="filters">
+    <button class="chip active" data-cat="All">All events</button><button class="chip" data-cat="Supercars">Supercars</button><button class="chip" data-cat="Classic Cars">Classic cars</button><button class="chip" data-cat="Auto Show">Auto shows</button><button class="chip" data-cat="Motorsport">Motorsport</button><button class="chip" data-cat="EV">EV & future tech</button>
+  </div>
+  <div class="searchrow"><input id="search" type="search" placeholder="Search event name or country…" aria-label="Search events"><select id="region" aria-label="Filter by region"><option value="All">All regions</option><option>Asia</option><option>Europe</option><option>North America</option><option>Oceania</option></select></div>
+  <div class="content">
+    <div class="events" id="eventList"></div>
+    <aside class="mapcard" id="map"><div class="maphead"><h3>🗺️ Event map preview</h3><span class="tag">Illustrative</span></div>
+      <div class="mapart" aria-label="Illustrative map graphic"><div class="continent c1"></div><div class="continent c2"></div><div class="continent c3"></div><div class="continent c4"></div>
+        <i class="pin" style="left:24%;top:31%"></i><i class="pin" style="left:51%;top:32%"></i><i class="pin" style="left:57%;top:39%"></i><i class="pin" style="left:77%;top:48%"></i><i class="pin" style="left:70%;top:68%"></i><i class="pin" style="left:43%;top:65%"></i>
+        <div class="mapnote">📍 Premium members will get venue locations and directions. This preview is decorative, not a live map.</div>
+      </div><p class="mapdisclaimer">A real Google Maps integration needs a Google Maps API key and billing setup. Event pins will use verified venue coordinates.</p>
+    </aside>
+  </div>
+</section>
+<section class="below">
+  <div class="info"><h3>🔎 Find your next car event</h3><p>Browse by country, event type, or name. Save your favourite shows and plan ahead with Premium.</p><ul><li>Supercars and luxury cars</li><li>Classic-car gatherings</li><li>International auto expos</li><li>Motorsport festivals</li></ul></div>
+  <div class="info"><h3>🔒 What Premium unlocks</h3><p>Detailed event pages can include:</p><ul><li>Venue, dates and opening times</li><li>Gallery and official event information</li><li>Ticket prices and booking links</li><li>Travel tips and Google Maps directions</li></ul></div>
+</section>
+</main>
+<footer><div class="wrap" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span><b style="color:#fff">MOTORSHOW <span style="color:var(--gold)">WORLD</span></b> · Discover. Subscribe. Experience.</span><span>Prototype · Event information must be verified before publishing.</span></div></footer>
+
+<div class="modalback" id="modalBack" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="btn x" onclick="closeModal()" aria-label="Close">✕</button><div id="modalBody"></div></div></div>
+<script>
+const events=[
+ {id:1,name:"Geneva International Motor Show",country:"Switzerland",region:"Europe",category:"Auto Show",date:"Dates to be confirmed",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80",summary:"An internationally known motor-show name. Check the official organizer for future editions."},
+ {id:2,name:"Tokyo Auto Salon",country:"Japan",region:"Asia",category:"Supercars",date:"Check official event calendar",img:"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80",summary:"A major custom-car and performance-car event in Japan."},
+ {id:3,name:"IAA Mobility",country:"Germany",region:"Europe",category:"EV",date:"Check official event calendar",img:"https://images.unsplash.com/photo-1503735911634-2bce6e2b6b2e?auto=format&fit=crop&w=600&q=80",summary:"Mobility, automotive technology and electric-vehicle exhibitions."},
+ {id:4,name:"SEMA Show",country:"United States",region:"North America",category:"Auto Show",date:"Check official event calendar",img:"https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=600&q=80",summary:"Automotive aftermarket products, custom builds and industry displays."},
+ {id:5,name:"Goodwood Festival of Speed",country:"United Kingdom",region:"Europe",category:"Motorsport",date:"Check official event calendar",img:"https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=600&q=80",summary:"A celebrated motorsport and car-culture festival."},
+ {id:6,name:"Pebble Beach Concours d’Elegance",country:"United States",region:"North America",category:"Classic Cars",date:"Check official event calendar",img:"https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?auto=format&fit=crop&w=600&q=80",summary:"A prestigious showcase of classic and collectible automobiles."},
+ {id:7,name:"Monterey Car Week",country:"United States",region:"North America",category:"Supercars",date:"Check official event calendar",img:"https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=600&q=80",summary:"A collection of car events, auctions and displays around Monterey."},
+ {id:8,name:"Australian International Motor Show",country:"Australia",region:"Oceania",category:"Auto Show",date:"Check official event calendar",img:"https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=600&q=80",summary:"Example listing: confirm whether a new edition is scheduled with official sources."}
+];
+let activeCat="All", premiumDemo=false;
+const list=document.getElementById('eventList');
+function render(){
+ const q=document.getElementById('search').value.toLowerCase(), region=document.getElementById('region').value;
+ const filtered=events.filter(e=>(activeCat==="All"||e.category===activeCat)&& (region==="All"||e.region===region)&&(`${e.name} ${e.country} ${e.category}`.toLowerCase().includes(q)));
+ list.innerHTML='';
+ if(!filtered.length){list.innerHTML='<div class="empty">No events match your search. Try another name or filter.</div>';return;}
+ filtered.forEach(e=>{
+  const card=document.createElement('article');card.className='event';
+  card.innerHTML=`<img src="${e.img}" alt="Illustrative car event photo" loading="lazy" onerror="this.style.display='none'"><div><span class="tag">${e.category}</span><h3>${e.name}</h3><div class="meta">🌐 ${e.country}</div><div class="meta">📅 ${e.date}</div><div class="event-bottom"><span class="locked">${premiumDemo?'✓ Premium preview unlocked':'🔒 Full details for Premium'}</span><button class="btn ${premiumDemo?'':'gold'}" onclick="showEvent(${e.id})">${premiumDemo?'View details':'Unlock details'}</button></div></div>`;
+  list.appendChild(card);
+ });
+}
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');activeCat=b.dataset.cat;render()}));
+document.getElementById('search').addEventListener('input',render);document.getElementById('region').addEventListener('change',render);
+function modal(html){document.getElementById('modalBody').innerHTML=html;document.getElementById('modalBack').classList.add('show')}
+function closeModal(){document.getElementById('modalBack').classList.remove('show')}
+document.getElementById('modalBack').addEventListener('click',e=>{if(e.target.id==='modalBack')closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+function openSubscribe(plan){const price=plan==='monthly'?'$0.75 / month':'$5.00 / year';modal(`<div class="eyebrow">MotorShow World Premium</div><h2 id="modalTitle">Unlock every event detail</h2><p>Your selected plan: <b style="color:#fff">${price}</b></p><ul><li>Event location and venue information</li><li>Photos, dates and opening hours</li><li>Ticket prices and official booking links</li><li>Travel tips and map directions</li></ul><div class="notice">This is a website prototype. Payments are not enabled and no money will be charged. A real subscription needs a secure payment provider, server-side account verification and cancellation controls.</div><button class="btn gold" style="width:100%;margin-top:14px" onclick="demoUnlock()">Preview Premium (demo only)</button><button class="btn" style="width:100%;margin-top:8px" onclick="closeModal()">Maybe later</button>`)}
+function demoUnlock(){premiumDemo=true;render();modal(`<div class="eyebrow">Demo mode</div><h2 id="modalTitle">Premium preview unlocked ✨</h2><p>You can now preview how full event details would look. This is only a local demo; it does not create an account or charge you.</p><button class="btn gold" onclick="closeModal();document.getElementById('events').scrollIntoView({behavior:'smooth'})">Explore event details</button>`)}
+function showEvent(id){const e=events.find(x=>x.id===id);if(!premiumDemo){openSubscribe('monthly');return}modal(`<div class="eyebrow">${e.category} · ${e.country}</div><h2 id="modalTitle">${e.name}</h2><img src="${e.img}" alt="Illustrative event photo" style="width:100%;max-height:210px;object-fit:cover;border-radius:12px;margin:10px 0"><p>${e.summary}</p><div class="detailgrid"><div class="detail"><small>Venue</small>Confirm with organizer</div><div class="detail"><small>Dates</small>${e.date}</div><div class="detail"><small>Ticket price</small>Not verified</div><div class="detail"><small>Travel</small>Directions need confirmed venue</div></div><div class="notice">Details shown here are demo content, not current verified event information. Before visiting, check the official event website.</div><button class="btn" style="margin-top:12px" onclick="closeModal()">Close</button>`)}
+document.getElementById('loginBtn').onclick=()=>modal(`<h2 id="modalTitle">Log in</h2><p>Account sign-in will be added when the website is connected to a secure authentication service.</p><div class="notice">This prototype does not collect or store passwords.</div><button class="btn" onclick="closeModal()">Close</button>`);
+document.getElementById('signupBtn').onclick=()=>modal(`<h2 id="modalTitle">Create your account</h2><p>Sign-up will be connected to secure account registration in the production version.</p><div class="notice">Please don't enter passwords or bank details into this demo.</div><button class="btn" onclick="closeModal()">Close</button>`);
+render();
+</script>
+</body></html>
